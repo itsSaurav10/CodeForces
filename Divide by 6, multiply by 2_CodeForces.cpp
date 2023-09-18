@@ -1,0 +1,47 @@
+#include<iostream>
+#include<bits/stdc++.h>
+
+#define si set<int>
+#define endl "\n"
+#define pi pair<int, int>
+#define um unordered_map<int ,int>
+#define vvi vector<vector<int>>
+#define vi vector<int>
+#define pb push_back
+#define eb emplace_back
+#define ll long long
+#define lli long long int
+#define x sort(arr.begin(), arr.end())
+#define rev reverse(arr.begin(), arr.end())
+#define mp make_pair
+#define v_pair vector<pair<int, int>>
+
+
+using namespace std;
+
+int main() {
+	// your code goes here
+	ll t;
+	cin>>t;
+	while(t--){
+		ll n;
+		cin>>n;
+		ll answer=0;
+		while(n%6==0){
+			n=n/6;
+			answer++;
+		}
+		while(n%3==0){
+			n=n/3;
+			answer=answer+2;
+		}
+		if(n==1){
+			cout<<answer<<endl;
+		}
+		else{
+			cout<<"-1"<<endl;
+		}
+	}
+	return 0;
+}
+
