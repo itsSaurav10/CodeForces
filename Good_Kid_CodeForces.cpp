@@ -40,21 +40,21 @@ class Solution {
 		}
 
 		void solve(){
-			ll n, m, k;
-			cin >> n >> m >> k;
-			if(n <= k and n <= m) {
-				cout << "Yes" << endl;
+			inp;
+			vi arr(n);
+			read(arr);
+			*min_element(all(arr)) += 1;
+			ll product = 1;
+			rep(i, 0, n) {
+				product *= arr[i]; 
 			}
-			else {
-				cout << "No" << endl;
-			}
+			cout << product << endl;
 		}
 };
 
 
 int main() {
 	Solution sol;
-	//sol.test_cases();
-	sol.solve();
+	sol.test_cases();
 	return 0;
 }

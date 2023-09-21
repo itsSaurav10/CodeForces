@@ -40,21 +40,24 @@ class Solution {
 		}
 
 		void solve(){
-			ll n, m, k;
-			cin >> n >> m >> k;
-			if(n <= k and n <= m) {
-				cout << "Yes" << endl;
+			string str;
+			cin >> str;
+			if(str == "abc") {
+				cout << "YES" << endl;
+				return;
 			}
-			else {
-				cout << "No" << endl;
-			}
+			if (str == "abc" or str == "acb" or str == "bac" or str == "cba") {
+		        cout << "YES" << endl;
+		    } 
+		    else {
+		        cout << "NO" << endl;
+		    }
 		}
 };
 
 
 int main() {
 	Solution sol;
-	//sol.test_cases();
-	sol.solve();
+	sol.test_cases();
 	return 0;
 }

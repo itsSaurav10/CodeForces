@@ -40,21 +40,30 @@ class Solution {
 		}
 
 		void solve(){
-			ll n, m, k;
-			cin >> n >> m >> k;
-			if(n <= k and n <= m) {
-				cout << "Yes" << endl;
-			}
-			else {
-				cout << "No" << endl;
-			}
+			ll a, b, c;
+			cin >> a >> b >> c;
+			ll new_a = b - (c - b);
+		    if(new_a >= a and new_a % a == 0 and new_a != 0) {
+		        cout << "YES" << endl;
+		        return;
+		    }
+		    ll new_b = a + (c - a) / 2;
+		    if(new_b >= b and (c-a) % 2 == 0 and new_b % b == 0 and new_b != 0) {
+		        cout << "YES" << endl;
+		        return;
+		    }
+		    ll new_c = a + 2*(b - a);
+		    if(new_c >= c and new_c % c == 0 and new_c != 0) {
+		        cout << "YES" << endl;
+		        return;
+		    }
+		    cout << "NO" << endl;
 		}
 };
 
 
 int main() {
 	Solution sol;
-	//sol.test_cases();
-	sol.solve();
+	sol.test_cases();
 	return 0;
 }
